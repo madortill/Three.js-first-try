@@ -2,7 +2,7 @@ import * as THREE from "three";
 import { MeshPhongMaterial } from "three";
 
 function main() {
-  consolw.log(window.devicePixelRatio);
+  alert(window.devicePixelRatio);
   const canvas = document.querySelector("#c");
   const renderer = new THREE.WebGL1Renderer({ canvas });
 
