@@ -2,7 +2,6 @@ import * as THREE from "three";
 import { MeshPhongMaterial } from "three";
 
 function main() {
-  alert(window.devicePixelRatio);
   const canvas = document.querySelector("#c");
   const renderer = new THREE.WebGL1Renderer({ canvas });
 
@@ -52,6 +51,7 @@ function main() {
     const height = canvas.clientHeight;
     const needResize = canvas.width !== width || canvas.height !== height;
     if (needResize) {
+      alert(window.devicePixelRatio);
       renderer.setSize(width, height, false);
       camera.aspect = canvas.clientWidth / canvas.clientHeight;
       camera.updateProjectionMatrix();
